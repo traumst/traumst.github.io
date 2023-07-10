@@ -1,0 +1,99 @@
+body {
+    background-color: var(--body-background-color);
+    min-height: 95vh;
+    max-height: 100vh;
+    font-family: var(--main-font-family);
+    line-height: var(--main-line-height);
+    position: relative;
+    z-index: 1;
+}
+
+body h1 {
+    text-align: center;
+    height: 3vh;
+}
+
+main {
+    height: 90vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+section::-webkit-scrollbar {
+    display: none;
+}
+
+section {
+    height: 83vh;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: var(--section-background-color);
+    scroll-snap-align: start;
+    overflow-y: auto;
+}
+
+section h2 {
+    z-index: 5;
+    border-radius: 20px;
+    margin: 20px;
+    padding-left: 50px;
+    position: sticky;
+    background-color: var(--section-header-background-color);
+    top: 0;
+    opacity: 0;
+    transform: translateX(+200px);
+    transition: all 0.7s ease-out;
+}
+
+section h2.slider {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+section > div {
+    padding: 20px;
+    margin-bottom: 20px;
+    color: var(--section-text-color);
+}
+
+section > div:nth-child(even) {
+    margin-right: 20%;
+    margin-left: 5%;
+    background-color: var(--content-light-color);
+    opacity: 0;
+    transform: translateX(+100px);
+    transition: all 0.66s ease-out;
+    border-radius: 30px;
+}
+
+section > div:nth-child(odd) {
+    margin-right: 5%;
+    margin-left: 20%;
+    background-color: var(--content-dark-color);
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 0.66s ease-out;
+    border-radius: 20px;
+}
+
+section > div.slider {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+section > div a {
+    color: var(--section-link-color);
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+section > div a:hover {
+    color: var(--section-link-hover-color);
+}
+
+section#contact form > div {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,42 @@
+:root {
+    --body-background-color: rgba(15, 17, 23, 1);
+    --header-footer-background-color: rgba(25, 27, 33, 0.8);
+    --header-footer-text-color: rgba(197, 202, 209, 1);
+
+    --header-font-family: JetBrains MonoThick, monospace;
+    --header-line-height: 2.5;
+
+    --section-header-background-color: rgba(35, 37, 43, 0.8);
+    --section-background-color: rgba(255, 255, 255, 0.02);
+
+    --main-font-family: JetBrains Mono, monospace;
+    --main-line-height: 1.7;
+
+    --nav-button-background-color: rgba(31, 33, 39, 0.9);
+
+    --nav-ul-background-color: rgba(41, 43, 49, 0.9);
+    --nav-li-background-color: rgba(21, 23, 29, 0.9);
+    --nav-link-color: rgba(144, 147, 152, 1);
+    --nav-link-hover-color: rgba(218, 165, 32, 1);
+    --nav-link-active-color: rgba(245, 245, 220, 1);
+
+    --content-light-color: rgba(31, 33, 39, 0.8);
+    --content-dark-color: rgba(21, 23, 29, 0.8);
+    --section-text-color: rgba(255, 255, 255, 1);
+    --section-link-color: rgba(144, 147, 152, 1);
+    --section-link-hover-color: rgba(197, 202, 209, 1);
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('fonts/webfonts/JetBrainsMono-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JetBrains MonoThick';
+    src: url('fonts/webfonts/JetBrainsMono-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}

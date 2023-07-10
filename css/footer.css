@@ -1,0 +1,10 @@
+footer {
+    background-color: var(--header-footer-background-color);
+    color: var(--header-footer-text-color);
+    text-align: center;
+    padding: 1vh;
+    flex-shrink: 0;
+    height: 2vh;
+    position: sticky;
+    bottom: 0;
+}
