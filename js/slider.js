@@ -3,7 +3,7 @@ function animateSlidingElements({
         section_divs}) {
     const intersectionObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
-            if (entry.intersectionRatio > 0.6) {
+            if (entry.intersectionRatio > 0.4) {
                 entry.target.classList.add('slider');
             } else {
                 entry.target.classList.remove('slider');
