@@ -29,6 +29,10 @@ function animateNavLinks({nav_links, sections}) {
 }
 
 function animateNavButton({ nav_button, nav_list, nav_links }) {
+    window.onload = function () {
+        nav_list.classList.add('hidden');
+    }
+
     nav_button.addEventListener('click', _ => {
         if (nav_list.classList.contains('hidden')) {
             showNavList();
