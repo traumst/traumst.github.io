@@ -1,6 +1,4 @@
-function animateSlidingElements({
-        section_headers,
-        section_divs}) {
+function animateSlidingElements({ section_headers, section_divs }) {
     const intersectionObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.intersectionRatio > 0.2) {

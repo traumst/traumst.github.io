@@ -46,8 +46,8 @@
             <h2>Welcome!</h2>
             <div>
                 Greetings and salutations!
-                I'm Alex, your humble host and resident software engineer with about _7_ years of experience
-                in the industry and still counting.
+                I'm Alex, your humble host and software engineer with about
+                <span class="since-2016"></span> years in the industry and still counting.
                 This website is a reflection of me and my coding philosophy.
                 No frills, no fuss - just plain, old-fashioned craftsmanship.
                 After all, my heart truly lies in the realm of Command Line Interface,
@@ -72,7 +72,7 @@
             <div>
                 Let's delve a bit into my backstory.
                 From the lively Petah Tikva to the vibrant tech scene,
-                I've been on a _seven-year_ roller coaster ride in software engineering.
+                I've been on a <span class="since-2016"></span> year-long roller coaster ride in software engineering.
                 Although my journey started at Bar Ilan University in Computer Engineering,
                 the spirit of the startup world lured me away from it.
             </div>
@@ -217,29 +217,21 @@
         <section id="contact">
             <h2>Contact</h2>
             <div>
-                <h3>Here's my</h3>
-                <a href="https://www.linkedin.com/in/alexanderlitvak">LinkedIn Profile</a>
+                <h3>Reach out on social</h3>
+                Here's my <a href="https://www.linkedin.com/in/alexanderlitvak">LinkedIn Profile</a>
             </div>
             <div>
-                <h3>You can also send me an email</h3>
+                <h3>Or send an email</h3>
                 <p>like it's 1999</p>
                 <br/>
-                <form action="mailto:TODO@example.com" enctype="text/plain" method="post">
-                    <div>
-                        <label for="email">Your Email:</label>
-                        <input type="text" id="email" name="email" maxlength="50" required>
-                    </div>
-                    <div>
-                        <label for="topic">Topic:</label>
-                        <input type="text" id="topic" name="topic" maxlength="60" required>
-                    </div>
-                    <div>
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" rows="10" cols="30" maxlength="2000" required></textarea>
-                    </div>
-                    <div>
-                        <input type="submit" value="Send">
-                    </div>
+                <form action="mailto:lul@what.no" enctype="text/plain" method="post">
+                    <label for="email">Your Email:</label>
+                    <input type="text" id="email" name="email" maxlength="50" required>
+                    <label for="topic">Topic:</label>
+                    <input type="text" id="topic" name="topic" maxlength="60" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="10" cols="30" maxlength="2000" required></textarea>
+                    <input type="submit" value="Send">
                 </form>
             </div>
             <div>
@@ -251,9 +243,8 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2023 Alexander Litvak</p>
+        <p>&copy;<span class="current-year"></span> Alexander Litvak</p>
     </footer>
-    <script src="js/limit.js"></script>
     <script src="js/nav.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/background.js"></script>

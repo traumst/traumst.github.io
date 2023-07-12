@@ -8,7 +8,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const section_divs = document.querySelectorAll('section > div');
     const email_form = document.querySelector("form");
     const svg_waves = document.querySelectorAll('.background#waves > svg > path');
-    //const svg_circles = document.querySelectorAll('.background#circles > svg > circle');
+    const currentYear = document.querySelectorAll('.current-year');
+    const since2016 = document.querySelectorAll('.since-2016');
+    const thisYear = new Date().getFullYear();
+
+    // set dynamic dates
+    currentYear.forEach(function (placeholder, idx) {
+        placeholder.textContent = "" + thisYear;
+    })
+    since2016.forEach(function (placeholder, idx) {
+        placeholder.textContent = "" + (thisYear - 2016);
+    })
 
     animateNavigationBar({main, nav_button, nav_list, nav_links, sections});
 
@@ -31,6 +41,5 @@ document.addEventListener("DOMContentLoaded", () => {
         refresh_fps: background_refresh_fps,
         layer_offset: background_layer_offset,
         svg_waves,
-        //svg_circles,
     })
 })

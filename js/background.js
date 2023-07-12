@@ -11,8 +11,7 @@ function animateBackground({
    jitter,
    refresh_fps,
    layer_offset,
-   svg_waves,
-   svg_circles
+   svg_waves
 }) {
     const max_fps = 60;
     const timeout = 1000 / (refresh_fps < max_fps ?  refresh_fps : max_fps);
@@ -20,22 +19,6 @@ function animateBackground({
     if (svg_waves) {
         drawWaves(svg_waves, phase, speed, jitter, direction, layer_offset, timeout);
     }
-
-    if (svg_circles) {
-        drawCircles(svg_circles, timeout)
-    }
-}
-
-function drawCircles(svg_circles, timeout) {
-    let iteration = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140];
-    setInterval(async function animateCircles() {
-        svg_circles.forEach(function (path, idx) {
-            iteration[idx]++;
-            iteration[idx] %= 140;
-            const radius = iteration[idx];
-            path.setAttribute('r', `${radius}`);
-        });
-    }, timeout);
 }
 
 function drawWaves(svg_waves, phase, speed, jitter, direction, layer_offset, timeout) {
