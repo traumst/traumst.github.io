@@ -119,16 +119,16 @@ form input, form textarea {
     border-radius: 5px;
     border: none;
     background-color: var(--section-background-color);
-    color: #EEE;
+    color: var(--section-text-color);
 }
 
 form input[type="submit"] {
     background-color: var(--section-background-color);
-    color: #EEE;
+    color: var(--section-text-color);
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 form input[type="submit"]:hover {
-    background-color: var(--section-background-color);
+    background-color: var(--nav-link-hover-color);
 }
