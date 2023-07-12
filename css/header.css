@@ -2,7 +2,6 @@ header {
     background-color: var(--header-footer-background-color);
     color: var(--header-footer-text-color);
     font-family: var(--header-font-family);
-    line-height: var(--header-line-height);
     padding: 1vh 0;
     position: sticky;
     top: 0;

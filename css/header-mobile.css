@@ -4,14 +4,12 @@
         align-items: center;
         justify-content: center;
         background: var(--nav-button-background-color);
-        /*background: linear-gradient(to bottom, #333333, #111111);*/
         position: absolute;
         top: 0;
-        right: 20px; /* width of scrollbar */
+        right: 20px;
         width: 50px;
         height: 4vh;
         border-radius: 10%;
-        /*border-color: black;*/
         margin: .5vh;
         transition: background-color 0.4s ease;
         border: none;

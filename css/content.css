@@ -14,8 +14,8 @@ body h1 {
 }
 
 main {
-    height: 90vh;
     scroll-snap-type: y mandatory;
+    height: 90vh;
     overflow-y: scroll;
 }
 
@@ -24,9 +24,9 @@ section::-webkit-scrollbar {
 }
 
 section {
-    height: 83vh;
-    padding: 20px;
-    margin-bottom: 20px;
+    height: 87vh;
+    padding: 2vh;
+    margin-bottom: 1vh;
     background-color: var(--section-background-color);
     scroll-snap-align: start;
     overflow-y: auto;
@@ -105,13 +105,10 @@ form {
     border-radius: 5px;
 }
 
-form div {
-    margin-bottom: 10px;
-}
-
 form label, form input, form textarea {
     display: block;
     width: 100%;
+    margin-bottom: 10px;
 }
 
 form input, form textarea {
