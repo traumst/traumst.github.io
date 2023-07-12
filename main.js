@@ -6,12 +6,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll('section');
     const section_headers = document.querySelectorAll('section > h2');
     const section_divs = document.querySelectorAll('section > div');
+    const email_form = document.querySelector("form");
     const svg_waves = document.querySelectorAll('.background#waves > svg > path');
     //const svg_circles = document.querySelectorAll('.background#circles > svg > circle');
 
     animateNavigationBar({main, nav_button, nav_list, nav_links, sections});
 
     animateSlidingElements({section_headers, section_divs});
+
+    animateContactForm({ email_form });
 
     // control the background wave parameters
     let background_phase = 0;
