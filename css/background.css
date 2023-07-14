@@ -10,9 +10,8 @@
 
 .background svg {
     position: absolute;
-    bottom: -30vw;
+    bottom: -50vh;
     left: -40vw;
     width: 160vw;
-    height: 160vw;
     transform: rotateZ(23deg);
 }

@@ -12,7 +12,7 @@
     --nav-link-active-color: rgba(245, 245, 220, 1);
 
     --main-font-family: JetBrains Mono, monospace;
-    --main-font-size: clamp(.9rem, 1.5vw, 1.5rem);
+    --main-font-size: clamp(.9rem, 1.2vw, 1.5rem);
     --section-header-background-color: rgba(35, 37, 43, 0.8);
     --section-background-color: rgba(255, 255, 255, 0.02);
     --content-light-color: rgba(31, 33, 39, 0.8);
@@ -24,14 +24,26 @@
 
 @font-face {
     font-family: 'JetBrains Mono';
-    src: url('fonts/webfonts/JetBrainsMono-Regular.woff2') format('woff2');
+    src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Regular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/ttf/JetBrainsMono-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'JetBrains MonoThick';
-    src: url('fonts/webfonts/JetBrainsMono-Bold.woff2') format('woff2');
+    src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/ttf/JetBrainsMono-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+}
+
+.glass {
+    background: linear-gradient(to right, rgba(150, 150, 150, 0.1), rgba(0, 0, 0, 0.2));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    -webkit-backdrop-filter: blur(4px);
 }

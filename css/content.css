@@ -1,7 +1,6 @@
 body {
     background-color: var(--body-background-color);
-    min-height: 95vh;
-    max-height: 100vh;
+    height: 95vh;
     font-family: var(--main-font-family);
     position: relative;
     z-index: 1;
@@ -27,7 +26,6 @@ section {
     height: 87vh;
     padding: 2vh;
     margin-bottom: 1vh;
-    background-color: var(--section-background-color);
     scroll-snap-align: start;
     overflow-y: auto;
 }
@@ -128,4 +126,23 @@ form input[type="submit"] {
 
 form input[type="submit"]:hover {
     background-color: var(--nav-link-hover-color);
+}
+
+#under-construction {
+    position: absolute; /* This positions the overlay relative to the container */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* A semi-transparent black background, adjust as needed */
+    color: white; /* Color of the overlay text, adjust as needed */
+    display: flex;
+    align-items: center; /* Center the text vertically */
+    justify-content: center; /* Center the text horizontally */
+    z-index: 100; /* Make sure the overlay is above the content */
+    font-size: 4vw;
+}
+
+#under-construction span {
+    transform: rotateZ(45deg);
 }
