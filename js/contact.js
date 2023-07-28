@@ -20,8 +20,7 @@ function animateContactForm({ email_form }) {
             return;
         }
 
-        const url = `${decodeBaseUrl()}/email`;
-        const response = await fetch(url, {
+        const response = await fetch("/email", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -40,9 +39,4 @@ function animateContactForm({ email_form }) {
 const emailValidationRegex = /^[a-z0-9]+@[a-z0-9]+\.[a-z0-9]+$/i;
 function validateEmail(email) {
     return emailValidationRegex.test(String(email).toLowerCase());
-}
-
-const baseUrl = "aqSdfTSxjHA4naHR0cDovLzIwOS4zOC4yMDAuMTU4Ojc2NTQ=";
-function decodeBaseUrl() {
-    return atob(baseUrl.substring(13));
 }
