@@ -20,6 +20,9 @@
     --section-text-color: rgba(255, 255, 255, 1);
     --section-link-color: rgba(144, 147, 152, 1);
     --section-link-hover-color: rgba(197, 202, 209, 1);
+
+    --success-color: var(--nav-link-hover-color);
+    --error-color: orangered;
 }
 
 @font-face {

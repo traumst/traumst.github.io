@@ -1,34 +1,38 @@
+const feedbackContent = document.getElementById('feedbackContent');
+const feedbackDialog = document.getElementById('feedbackDialog');
+const closeDialogBtn = document.getElementById('closeDialogBtn');
+closeDialogBtn.addEventListener('click', () => {
+    feedbackDialog.close();
+});
+
 function animateContactForm({ email_form }) {
     email_form.addEventListener("submit", async function (event) {
         event.preventDefault();
 
-        const emailElement = event.target.email;
-        const email = emailElement.value;
-        const topicElement = event.target.topic;
-        const topic = topicElement.value;
-        const messageElement = event.target.message;
-        const message = messageElement.value;
-        //const submitButton = event.target.form_submit;
+        const form = event.target;
+        const email = form.email;
+        const topic = form.topic;
+        const message = form.message;
 
-        emailElement.setCustomValidity("");
-        topicElement.setCustomValidity("");
-        messageElement.setCustomValidity("");
+        email.setCustomValidity("");
+        topic.setCustomValidity("");
+        message.setCustomValidity("");
 
-        if (!validateEmail(email)) {
-            emailElement.setCustomValidity("That email looks broken");
-            emailElement.reportValidity();
+        if (!validateEmail(email.value)) {
+            email.setCustomValidity("That email looks broken");
+            email.reportValidity();
             return;
         }
 
-        if (topic.trim() < 3) {
-            topicElement.setCustomValidity("Topic for the email looks empty");
-            topicElement.reportValidity();
+        if (topic.value.trim() < 3) {
+            topic.setCustomValidity("Topic for the email looks empty");
+            topic.reportValidity();
             return;
         }
 
-        if (message.trim() < 5) {
-            messageElement.setCustomValidity("Message of the email is empty");
-            messageElement.reportValidity();
+        if (message.value.trim() < 5) {
+            message.setCustomValidity("Message of the email is empty");
+            message.reportValidity();
             return;
         }
 
@@ -45,12 +49,18 @@ function animateContactForm({ email_form }) {
         });
 
         if (response.ok) {
-            emailElement.value = '';
-            topicElement.value = '';
-            messageElement.value = '';
-            alert("Email submitted!");
+            email.value = '';
+            topic.value = '';
+            message.value = '';
+            feedbackContent.textContent = "Email submitted!";
+            feedbackContent.classList.remove('failure');
+            feedbackContent.classList.add('success');
+            feedbackDialog.showModal();
         } else {
-            alert(`Email submission failed: ${response.status} ${response.statusText}`);
+            feedbackContent.textContent = `Email submission failed: ${response.status} ${response.statusText}`;
+            feedbackContent.classList.remove('success');
+            feedbackContent.classList.add('failure');
+            feedbackDialog.showModal();
         }
     });
 }
