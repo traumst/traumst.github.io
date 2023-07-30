@@ -224,14 +224,14 @@
                 <h3>Or send an email</h3>
                 <p>like it's 1999</p>
                 <br/>
-                <form enctype="text/plain" method="post">
+                <form enctype="text/plain" method="post" novalidate>
                     <label for="email">Your Email:</label>
                     <input type="text" id="email" name="email" maxlength="50" required>
                     <label for="topic">Topic:</label>
                     <input type="text" id="topic" name="topic" maxlength="60" required>
                     <label for="message">Message:</label>
                     <textarea id="message" name="message" rows="10" cols="30" maxlength="2000" required></textarea>
-                    <input type="submit" value="Send">
+                    <input name="form_submit" type="submit" value="Send">
                 </form>
             </div>
             <div>
