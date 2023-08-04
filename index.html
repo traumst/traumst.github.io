@@ -7,30 +7,19 @@
     <link rel="icon" type="image/svg+xml" href="img/scarab-bnw.svg">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/background.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/content.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/mobile-adjustments.css">
 </head>
 <body>
-    <div id="waves" class="background">
-        <svg viewBox="0 0 100 100">
-            <path d="M0,0" fill="#8d9ed0"   fill-opacity="1"/>
-            <path d="M0,0" fill="beige"     fill-opacity="1"/>
-            <path d="M0,0" fill="goldenrod" fill-opacity=".7"/>
-            <path d="M0,0" fill="#505557"   fill-opacity="1"/>
-            <path d="M0,0" fill="#8d9ed0"   fill-opacity="1"/>
-            <path d="M0,0" fill="beige"     fill-opacity="1"/>
-            <path d="M0,0" fill="goldenrod" fill-opacity=".7"/>
-            <path d="M0,0" fill="#505557"   fill-opacity="1"/>
-        </svg>
+    <div id="waves" class="background"
+         hx-get="/html/background.html"
+         hx-trigger="load">
     </div>
     <header>
         <div class="logo">
-            <a href="">
-                <img src="img/scarab-bnw.svg" alt="logo,bug"/>
-            </a>
+            <a href=""><img src="img/scarab-bnw.svg" alt="logo,bug"/></a>
         </div>
         <nav>
             <button aria-label="menu-button">☰</button>
@@ -42,217 +31,30 @@
         </nav>
     </header>
     <main>
-        <section id="home">
-            <h2>Welcome!</h2>
-            <div>
-                Greetings and salutations!
-                I'm Alex, your humble host and software engineer with about
-                <span class="since-2016"></span> years in the industry and still counting.
-                This website is a reflection of me and my coding philosophy.
-                No frills, no fuss - just plain, old-fashioned craftsmanship.
-                After all, my heart truly lies in the realm of Command Line Interface,
-                and this website is my concession to the GUI world.
-            </div>
-            <div>
-                What's my approach, you ask?
-                Simply put, it's all about keeping complexity demon in check.
-                In our coding journey, we often cross the bridge from monolithic behemoth to microservices marvel.
-                Along the way, we tangle with load balancers, databases, caches, and containers,
-                not to mention the occasional graph database detour.
-                Amidst all this, it's essential to keep a humble human perspective.
-            </div>
-            <div>
-                By using design patterns(mention singleton once again and I swear I'm gonna snap),
-                best practices, and some clever scoping, we can make code that's not just functional,
-                but also future-proof and evolutionary.
-                Sure, the allure of JS framework like Vue, a sprinkle of WASM components,
-                or even a touch of Rust might tempt me down the line,
-                but at the core, simplicity remains king.
-            </div>
-            <div>
-                Let's delve a bit into my backstory.
-                From the lively Petah Tikva to the vibrant tech scene,
-                I've been on a <span class="since-2016"></span> year-long roller coaster ride in software engineering.
-                Although my journey started at Bar Ilan University in Computer Engineering,
-                the spirit of the startup world lured me away from it.
-            </div>
-            <div>
-                I've worked on a cybersecurity venture, wrapping websites in the cozy blanket of security,
-                and have since dabbled in multiple other startups.
-                You can find details of those on the <a href="#about">About</a> section.
-                This rollercoaster ride has given me a colorful palette of backend languages and technologies,
-                from JavaScript and C# to Rust and PHP, Python, SQL, Shell Scripting and even LUA if you can believe it.
-            </div>
-            <div>
-                As a backend enthusiast, I've danced with the likes of nginx, redis, kafka/rabbitmq, and docker.
-                Although I started out working with plain JavaScript,
-                I've since been swept up in the wave of modern JavaScript, TypeScript, React, and Vue.
-                However, the charm of Rust and the allure of Yew still hold a special place in my heart.
-            </div>
-            <div>
-                Over the years, I've tangled with design patterns, wrangled with code refactoring, and dabbled in DB operations.
-                If there's one thing I've learned, it's that 'good' code is not just about functioning flawlessly today.
-                It's about standing the test of time and enabling easy refactoring and transitions between architectural styles.
-            </div>
-            <div>
-                Throughout this journey,
-                I've learned that software engineering is as much about
-                simplifying ideas and spreading knowledge as it is about coding.
-                I thrive in smaller teams where I can lead by example, foster open dialogues,
-                and promote continuous learning.
-            </div>
-            <div>
-                Welcome to my world - a place where we keep it simple, keep it human, and always, always keep learning.
-            </div>
+        <section id="home"
+                 hx-get="/html/home.html"
+                 hx-trigger="intersect once">
+            <div>Loading home section...</div>
         </section>
 
-        <section id="about">
-            <h2>About</h2>
-            <div>
-                <h3>Wotch Health - from 2023 onward</h3>
-                <p>
-                    In Wotch we are building better tools for modern age in medical care system.
-                    Leaving the UX/UI benefits aside, what I personally am involved in is providing the best
-                    server-side solutions for automation of the flows that the patient is going through.
-                    We coagulate disperse information relevant to a physician for a given patient.
-                    No more clicking on a million arbitrary tabs of the outdated system, everything they need
-                    should just be right there, concisely presented in a single place with appropriate context
-                    and helpful suggestions of what next steps to take.
-                </p>
-                <br />
-                <p>
-                    Stack:
-                    .Net 6 cloud-based solution, Sql Server via Entity Framework, Kafka and other Orchestration tools.
-                    On the front-end - ReactJS.
-                </p>
-            </div>
-            <div>
-                <h3>Tipalti - between 2022 and 2023</h3>
-                <p>
-                    Tipalti is an Account Payable Automation Software, that optimizes expenditures and report of that.
-                    I was a part of the payments team, which means we delt with anything related to the movement of money.
-                    From determining the best route to ensuring every monetary operation was done proptly and without fail,
-                    our entire team focus was on doing this "by the book".
-                    Operating under money-transmitter license, the firm had to make sure to settle any and all pending transactions
-                    by the end of the day, leaving no funds in mid-air.
-                    We wrote tests and peer-reviewed each others code changes to ensure best delivery with minimal potential for bugs.
-                    Since the company was already established, I did not have to setup any infrastructure and only interacted with it as a user.
-                </p>
-                <br />
-                <p>
-                    Stack:
-                    .Net 5 microservices in conjunction with legacy .Net 4.5 monolith, running in AWS ec2 and lambdas.
-                    Entity Framework for the DB interaction, and many other tools, all of which were provided as libraries.
-                    No client side changes were made by me here, except for some internal tooling.
-                </p>
-            </div>
-            <div>
-                <h3>Oktopost - from 2021 to 2022</h3>
-                <p>
-                    As a B2B sociam media management platform, Oktopost takes up on a challenge of providing
-                    a hub for all of your company's social media needs.
-                    We enabled companies to run marketing campaigns, aggregated and presented elaborate engagement statistics
-                    and allowed for clean, yet sophisticated way of communication with the consumers.
-                    Targeting to improve impact of social networks on the business.
-                    Most of the infrastructure was setup and maintained in-house by a small and dedicated team,
-                    be it CI/CD pipelines or DevOps.
-                    I was part of a small server team, built microservices in donet and maintained and
-                    augmented existing product written almost entirely in php.
-                </p>
-                <br/>
-                <p>
-                    Stack:
-                    PHP, .Net, MySQL, Kafka, etc., all on AWS.
-                    Front-end was in ReactJS, while internal tooling was often GUI'ed in PHP.
-                </p>
-            </div>
-            <div>
-                <h3>Cognni - from 2018 to 2021</h3>
-                <p>
-                    I joined Cognni in early 2018, back then it was called Shiledox and was sort of
-                    a cybersecurity startup, that wanted <i>shield</i> enterprise client documents in
-                    a seamless manner.
-                    We later pivoted to pure analytics tool, focused on AI-based classification and data analysis.
-                    We built a distributed cloud system for data analysis, integrated proprietary classification
-                    and we did that to make the job of CISO easier, presenting potential data leaks and
-                    security anomalies in a sleek and concise way.
-                    All of this analysis ran in semi-realtime to provide the best intelligence on the
-                    movement of data inside of organizations and limit exposure of sensitive info to the outside world.
-                </p>
-                <br/>
-                <p>
-                    Stack:
-                    .Net 5 and NodeJS microservices, based on vms running in Azure.
-                    Managed MySQL service, ServiceBus - managed queue service and other services for caching and CI/CD.
-                    VueJS on the frontend, which I was involved in limited capacity, mostly solving CORS-issues.
-                </p>
-            </div>
-            <div>
-                <h3>ChameleonX - from 2016 to 2017</h3>
-                <p>
-                    I've joined ChameleonX in it's ealriest stage and was in fact their first employee.
-                    We developed an integrity layer for the website which ensure site is displayed the way it was intended.
-                    We used this tech to serve ads through the adblockers, but later pivoted to the cybersecurity angle.
-                    When I joined there was a POC written in older .Net framework version of C# that was
-                    intended to be used as Wordpress plugin.
-                    There I delved into the depth of software design and learned about quite literally everything.
-                    Layers of the internet, protocols, CDNs, proxies, reverse-proxies, code-injection, load balancing and much much more.
-                    We've developed and grown a monolith up from scratch, deployed it manually to cloud VMs,
-                    only ever taking a short breather for some vanila JS scripting. Not even a JQuery.
-                    Oh, and did I mention LUA scripting for regex-based proxy pass-through code injections?
-                    Yeah I did that. Complemented with custom nginx builds for both injections I mentioned
-                    as well as load balancing.
-                    Those were the days.
-                </p>
-                <br />
-                <p>
-                    Stack:
-                    .Net Framework - probably 3.5 or something like that, Sql Server, and endless cloud related resources.
-                    We didn't really have a front end, as our scripts would be injected into existing websites,
-                    so we couldn't use any libraries or risk breaking client website.
-                </p>
-            </div>
+        <section id="about"
+                 hx-get="/html/about.html"
+                 hx-trigger="intersect once">
+            <div>Loading about section...</div>
         </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <div>
-                <h3>Reach out on social</h3>
-                Here's my <a href="https://www.linkedin.com/in/alexanderlitvak">LinkedIn Profile</a>
-            </div>
-            <div>
-                <h3>Or send an email</h3>
-                <p>like it's 1999</p>
-                <br/>
-                <form enctype="text/plain" method="post" novalidate>
-                    <label for="email">Your Email:</label>
-                    <input type="text" id="email" name="email" maxlength="50" required>
-                    <label for="topic">Topic:</label>
-                    <input type="text" id="topic" name="topic" maxlength="60" required>
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="10" cols="30" maxlength="2000" required></textarea>
-                    <input name="form_submit" type="submit" value="Send">
-                </form>
-                <dialog id="feedbackDialog">
-                    <div id="feedbackContent"></div>
-                    <button id="closeDialogBtn">Close</button>
-                </dialog>
-            </div>
-            <div>
-                <h3>Or even</h3>
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener">
-                    Follow me on YouTube
-                </a>
-            </div>
+        <section id="contact"
+                 hx-get="/html/contact.html"
+                 hx-trigger="intersect once">
+            <div>Loading contact section...</div>
         </section>
     </main>
     <footer>
         <p>&copy;<span class="current-year"></span> Alexander Litvak</p>
     </footer>
+    <script src="https://unpkg.com/htmx.org@1.9.4"></script>
     <script src="js/nav.js"></script>
     <script src="js/slider.js"></script>
-    <script src="js/background.js"></script>
-    <script src="js/contact.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

@@ -1,0 +1,88 @@
+<h2>Contact</h2>
+<div>
+    <h3>Reach out on social</h3>
+    Here's my <a href="https://www.linkedin.com/in/alexanderlitvak">LinkedIn Profile</a>
+</div>
+<div>
+    <h3>Or send an email</h3>
+    <p>like it's 1999</p>
+    <br/>
+    <form enctype="text/plain" method="post" novalidate>
+        <label for="email">Your Email:</label>
+        <input type="text" id="email" name="email" maxlength="50" required>
+        <label for="topic">Topic:</label>
+        <input type="text" id="topic" name="topic" maxlength="60" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="10" cols="30" maxlength="2000" required></textarea>
+        <input name="form_submit" type="submit" value="Send">
+    </form>
+    <dialog id="feedbackDialog">
+        <div id="feedbackContent"></div>
+        <button id="closeDialogBtn">Close</button>
+    </dialog>
+</div>
+<div>
+    <h3>Or even</h3>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener">
+        Follow me on YouTube
+    </a>
+</div>
+<style>
+    section#contact form > div {
+        display: flex;
+        justify-content: space-between;
+    }
+    form {
+        background-color: var(--section-background-color);
+        padding: 20px;
+        border-radius: 5px;
+    }
+    form label, form input, form textarea {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    form input, form textarea {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: var(--section-background-color);
+        color: var(--section-text-color);
+    }
+    form input[type="submit"] {
+        background-color: var(--section-background-color);
+        color: var(--section-text-color);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    form input[type="submit"]:hover {
+        background-color: var(--nav-link-hover-color);
+    }
+    dialog {
+        background: var(--header-footer-background-color);
+        border-radius: 20px;
+        padding: 20px;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 1);
+    }
+    #feedbackContent {
+        padding: 10px 0;
+    }
+    #closeDialogBtn {
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: var(--nav-link-active-color);
+    }
+    .success {
+        color: var(--success-color);
+    }
+    .failure {
+        color: var(--error-color);
+    }
+</style>
+<script src="/js/contact.js"></script>

@@ -24,8 +24,8 @@ section::-webkit-scrollbar {
 
 section {
     height: 87vh;
-    padding: 2vh;
-    margin-bottom: 1vh;
+    padding: 1vh;
+    margin-bottom: 2vh;
     scroll-snap-align: start;
     overflow-y: auto;
 }
@@ -90,71 +90,4 @@ section > div a {
 
 section > div a:hover {
     color: var(--section-link-hover-color);
-}
-
-section#contact form > div {
-    display: flex;
-    justify-content: space-between;
-}
-
-form {
-    background-color: var(--section-background-color);
-    padding: 20px;
-    border-radius: 5px;
-}
-
-form label, form input, form textarea {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-form input, form textarea {
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    background-color: var(--section-background-color);
-    color: var(--section-text-color);
-}
-
-form input[type="submit"] {
-    background-color: var(--section-background-color);
-    color: var(--section-text-color);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-form input[type="submit"]:hover {
-    background-color: var(--nav-link-hover-color);
-}
-
-dialog {
-    background: var(--header-footer-background-color);
-    border-radius: 20px;
-    padding: 20px;
-    position: relative;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 1);
-}
-
-#feedbackContent {
-    padding: 10px 0;
-}
-
-#closeDialogBtn {
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: var(--nav-link-active-color);
-}
-
-.success {
-    color: var(--success-color);
-}
-
-.failure {
-    color: var(--error-color);
 }
