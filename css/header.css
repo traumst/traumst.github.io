@@ -39,10 +39,11 @@ nav a.active {
 }
 
 nav button {
-    font-size: 24px;
+    background-color: transparent; /* TODO */
     color: var(--header-footer-text-color);
-    max-inline-size: content-box;
+    font-size: 32px;
     display: none;
+    border-radius: 10px;
 }
 
 nav ul {

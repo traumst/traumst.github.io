@@ -1,5 +1,9 @@
 :root {
-    --body-background-color: rgba(15, 17, 23, 1);
+    /*sunset*/
+    --background-4: rgba(69, 97, 150, 1);
+    --background-3: rgba(188, 183, 203, 1);
+    --background-2: rgb(224, 188, 120);
+    --background-1: rgba(218, 165, 32, 1);
     --header-footer-background-color: rgba(25, 27, 33, 0.8);
     --header-footer-text-color: rgba(197, 202, 209, 1);
     --header-font-family: JetBrains MonoThick, monospace;
